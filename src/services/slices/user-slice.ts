@@ -104,7 +104,7 @@ const userSlice = createSlice({
       })
       .addCase(logout.fulfilled, (state) => {
         state.user = null;
-        state.isAuthChecked = true; 
+        state.isAuthChecked = true;
         state.isLoading = false;
       })
       .addCase(getUser.pending, (state) => {
