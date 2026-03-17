@@ -2,7 +2,12 @@
 
 declare namespace Cypress {
   interface Chainable {
-    setAuthTokens(): Chainable<void>;
-    clearAuthTokens(): Chainable<void>;
+    addIngredient(ingredientName: string): Chainable<void>;
+    checkIngredientModal(ingredientName: string, nutrition: {
+      calories?: string;
+      proteins?: string;
+      fat?: string;
+      carbohydrates?: string;
+    }): Chainable<void>;
   }
 }
